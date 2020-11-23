@@ -47,7 +47,6 @@
             android:id="@+id/pg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="222dp"
             android:background="@color/pg_color"
             android:paddingVertical="4dp"
@@ -55,44 +54,43 @@
             android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_left"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/name"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="12dp"
             android:text="@string/name"
             android:textColor="@color/name"
             android:textSize="40sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
             app:layout_constraintTop_toBottomOf="@+id/pg" />
 
         <TextView
             android:id="@+id/tag"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="4dp"
             android:text="@string/tag"
             android:textColor="@color/tag"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
         <ImageView
             android:id="@+id/star1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             app:layout_constraintEnd_toStartOf="@+id/imageView3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/tag"
             app:srcCompat="@drawable/ic_star_icon" />
 
@@ -160,38 +158,36 @@
             android:id="@+id/storyline_head"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:text="@string/storyline_head"
             android:textColor="@color/storyline_head"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/star1" />
 
         <TextView
             android:id="@+id/storyline"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="4dp"
             android:text="@string/storyline"
             android:textColor="@color/storyline"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
             app:layout_constraintTop_toBottomOf="@+id/storyline_head" />
 
         <TextView
             android:id="@+id/cast_head"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="24dp"
             android:text="@string/cast"
             android:textColor="@color/storyline_head"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/storyline" />
 
         <ImageView
@@ -199,12 +195,11 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="1:1"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="7dp"
             android:src="@drawable/rd"
             app:layout_constraintEnd_toStartOf="@+id/cast_2"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/cast_head" />
 
         <ImageView
@@ -240,9 +235,8 @@
             app:layout_constraintDimensionRatio="1:1"
             android:layout_marginStart="8dp"
             android:layout_marginTop="7dp"
-            android:layout_marginEnd="16dp"
             android:src="@drawable/ch"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/cast_3"
             app:layout_constraintTop_toBottomOf="@+id/cast_head" />
@@ -298,6 +292,20 @@
             app:layout_constraintStart_toStartOf="@+id/cast_4"
             app:layout_constraintEnd_toEndOf="@+id/cast_4"
             app:layout_constraintTop_toBottomOf="@+id/cast_4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
