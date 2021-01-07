@@ -15,5 +15,8 @@
     <color name="storyline_head">#ECECEC</color>
     <color name="storyline">#BFFFFFFF</color>
     <color name="cast_text">#D8D8D8</color>
+    <color name="star_gray">#6D6D80</color>
+    <color name="star_pink">#FF3365</color>
+    <color name="background">#191926</color>
 
 </resources>
